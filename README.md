@@ -10,13 +10,11 @@ Este é um projeto de **calculadora simples com interface gráfica** desenvolvid
 
 * Configuração do ambiente Java com Swing
 * Criação da classe `Operacoes.java` responsável pelas operações matemáticas básicas:
-
   * Soma
   * Subtração
   * Multiplicação
   * Divisão (com tratamento de divisão por zero)
 * Desenvolvimento da interface gráfica (`CalculadoraGUI.java`):
-
   * Janela com `JFrame`
   * Visor com `JTextField`
   * Botões numéricos (0–9)
@@ -24,48 +22,77 @@ Este é um projeto de **calculadora simples com interface gráfica** desenvolvid
   * Botões "=" e "C" (limpar)
 * Layout organizado com `GridLayout`
 * Ajuste visual: aumento do tamanho dos botões e do visor
+* Implementação da lógica de cálculo com `ActionListener`
+* Exibição do operador na tela durante a operação
+* Tratamento para não exibir decimais desnecessários (ex: 4.0 → 4)
 
 ---
 
-## 🔄 Próximos Passos
+## 📝 To-Do List do Projeto
 
-* Conectar eventos aos botões (ActionListener)
-* Implementar a lógica do cálculo com base na entrada do usuário
-* Permitir limpar valores com o botão "C"
-* Tratar erros como divisão por zero, entrada inválida, etc.
-* Adicionar suporte a números decimais (opcional)
+### 🧩 Parte 1: Preparação do Ambiente  
+- [x] Criar projeto Java  
+- [x] Configurar JDK 8+  
+- [x] Verificar uso do Swing  
 
----
+### 🧮 Parte 2: Classe de Operações Matemáticas (`Operacoes.java`)  
+- [x] Criar métodos: `somar`, `subtrair`, `multiplicar`, `dividir`  
+- [x] Tratar divisão por zero  
 
-## 🛠️ Como rodar o projeto
+### 🖥️ Parte 3: Interface Gráfica (`CalculadoraGUI.java`)  
+- [x] Criar janela (`JFrame`)  
+- [x] Criar display (`JTextField`)  
+- [x] Criar botões numéricos, operadores, `=`, `C`  
 
-1. Clone o repositório:
+### 🔲 Parte 4: Layout da Interface  
+- [x] Organizar botões com `GridLayout`  
+- [x] Ajustar tamanho da fonte dos botões  
+- [x] Aumentar visualização do display  
 
-   ```bash
-   git clone https://github.com/SEU_USUARIO/calculadora-java-gui.git
-   ```
+### 🧠 Parte 5: Conectar Eventos  
+- [x] Adicionar `ActionListener` aos botões  
+- [x] Controlar entrada de números e operadores  
+- [x] Atualizar display conforme cliques  
 
-2. No seu editor ou terminal, compile os arquivos `.java`:
+### 🧮 Parte 6: Lógica de Cálculo  
+- [x] Armazenar valores digitados  
+- [x] Chamar métodos da classe `Operacoes`  
+- [x] Mostrar resultado no display ao clicar `=`  
 
-   ```bash
-   javac *.java
-   ```
+### 🧼 Parte 7: Botão `C` (limpar)  
+- [x] Zerar memória e display  
 
-3. Execute o arquivo da interface gráfica:
+### 🔧 Parte 8: Testes e Melhorias  
+- [ ] Testar operações com diferentes entradas  
+- [ ] (Opcional) Suporte a números decimais  
+- [ ] (Opcional) Melhorias de UI  
+- [ ] (Opcional) Separar controle em `ControleCalculadora.java`  
 
-   ```bash
-   java CalculadoraGUI
-   ```
-
----
+--- 
 
 ## 🧱 Estrutura de Arquivos
 
 ```
 📦 calculadora-java-gui
- ┣ 📜 Operacoes.java       -> Classe com métodos de operações matemáticas
- ┣ 📜 CalculadoraGUI.java  -> Criação da interface gráfica (Swing)
- ┗ 📜 (em breve) ControleCalculadora.java -> Conexão dos eventos da interface com a lógica da calculadora
+ ┣ 📜 Operacoes.java          -> Classe com métodos de operações matemáticas
+ ┣ 📜 CalculadoraGUI.java     -> Interface gráfica da calculadora (Swing)
+ ┣ 📜 ManipuladorEventos.java -> Conecta os eventos da UI com a lógica
+ ┗ 📜 (opcional) ControleCalculadora.java -> Separação de responsabilidades futura
+```
+
+---
+
+## 🛠️ Como rodar o projeto 1. Clone o repositório:
+```bash
+   git clone https://github.com/andersonjorgeg/calculadora-java-gui.git
+```
+2. No seu editor ou terminal, compile os arquivos .java:
+```bash
+   javac *.java
+```
+3. Execute o arquivo da interface gráfica:
+```bash
+   java CalculadoraGUI
 ```
 
 ---
